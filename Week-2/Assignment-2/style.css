@@ -7,20 +7,24 @@ nav{
     background-color: grey;
 }
 
-#logo{
+.logo{
     text-align: left;
     width:59%;
     padding-left: 1%;
 }
 
-.nav_item{
+.nav-item{
     width:9%;
-    padding-right: 1%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
 }
 
+.nav-item:hover{
+    background-color: steelblue;
+}
 nav a{
     float:left;
-    margin: 0px;
+    margin: 0 auto;
     background-color: grey;
     text-align: center;
     text-decoration: none;
@@ -29,7 +33,7 @@ nav a{
     padding-bottom:2%;
 }
 
-#wmsg{
+.welcome-message{
     font-size: 2em;
     clear:left;
     text-align: center;
@@ -38,7 +42,7 @@ nav a{
     background-color: steelblue;
 }
 
-#title{
+.title{
     font-size: 1.5em;
     clear:left;
     text-align: center;
@@ -47,16 +51,17 @@ nav a{
     width: auto;
 }
 
-.contentBox{
+.content-box{
     justify-content: center;
     align-items: center;
     padding-bottom:20%;
     margin:0 auto;
     background-color: lightblue;
     width:45%;
+    height:10rem;
 }
 
-#boxparent{
+.box-parent{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,15 +72,23 @@ nav a{
     width:88%;
 }
 
-p{
+.content-box h3{
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     margin:0 auto;
-    width:120px;
 }
 
-#showMore{
+.content-box p{
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin:0 auto;
+}
+
+.show-more{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -88,4 +101,35 @@ p{
 
 .hide{
     display: none;
+}
+
+.new-content-div div{
+    margin:1rem;
+    align-content: center;
+    float: left;
+}
+
+.new-content-div div span{
+    width:7rem;
+    align-content: center;
+    float: left;
+}
+
+.new-content-div{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.add-content-in-box{
+    clear: both;
+    margin: 0 auto;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:10%;
+    padding: 1%;
+    margin-left:45%;
+    margin-right:45%;
+    background-color: lightblue;
 }
