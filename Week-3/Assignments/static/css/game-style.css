@@ -1,0 +1,103 @@
+html{
+    color: #453131;
+}
+
+h2{
+    font-size:2rem;
+}
+.word-card{
+    font-size: 1rem;
+    color: #533939;
+    background-color: #FFBFBB;
+    border: white 10px solid;
+    border-color: white;
+    border-radius: 22px;
+    vertical-align: top;
+    min-height:180px;
+    margin: 0;
+    float: left; 
+    text-align: center;
+    align-content: center;
+}
+
+.word-card:hover{
+    background-color: #DF9090;
+    color: rgb(255, 246, 246);
+}
+
+.word-card-title{
+    line-height: 200px;
+    pointer-events: none;
+}
+
+.word-card-content h4{
+    margin: 1.2rem;
+    padding: 0;
+}
+.word-card-content p{
+    margin: 1.2rem;
+    padding: 0; 
+    text-align: left;
+    text-indent: 2rem;
+    word-break: break-all;
+}
+
+.word-card-content p.source{
+    text-indent: 0;
+}
+
+.word-card-content{
+    font-size: 1.1rem;
+    color: #312222;
+    background-color: #EDDDDD;
+    border: white 10px solid;
+    border-color: white;
+    border-radius: 22px;
+    min-height:180px;
+    float: left;
+    text-align: left;
+}
+
+.game-zone{
+    margin: 0;
+    width:90%;
+    max-width: 90%;
+    height: 100%;
+}
+
+
+.card-hide{
+    display: none;
+}
+
+.button-hide{
+    float:left;
+}
+
+
+.output{
+    margin: 0 auto;
+    margin-top: 3%;
+    width:90%;
+    max-width: 90%;
+    text-align: center;
+    }
+
+.output-hide{
+    display: none;
+}
+    
+
+.game-zone-hide{
+    display: none;
+}
+
+.play-again{
+    margin: 1rem;
+    font-size: 1.2rem;
+    background-color: #FFBFBB;
+    height: 60px;
+    padding: 1rem;
+    border-color: #453131;
+    border-radius: 8px;
+}

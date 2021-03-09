@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>data</title>
+    </head>
+    <body>
+        {% if track_name == '' %}
+        <form action="{{url_for('track_name')}}" method='GET'>
+            <label> Input your username</label>
+            <input type='text' name='name' value="{{track_name}}" autofocus>
+            <input type='submit' value="Let's build it!">
+        </form>
+        {%else %}
+        <h2>Welcome {{ track_name }}</h2>
+        <form action="{{url_for('track_name')}}" method='GET'>
+            <label> Update your username</label>
+            <input type='text' name='name' value="{{track_name}}" autofocus>
+            <input type='submit' value="Let's build it!">
+        </form>
+        {% endif %}
+    </body>
+</html>
