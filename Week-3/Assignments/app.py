@@ -16,10 +16,7 @@ def data():
     num1 = request.args.get('number')
     try:
         num1 = int(num1)
-        if num1 < 1000000:
-            result = sum(range(1, num1 +1))
-        else:
-            result = 'Number is too big for this simple website to calculate.'
+        result = int((1+num1)*(num1)/2)
         return render_template('calculate_sum.html', result = result)
     except:
         condition = 'Wrong Parameter'
@@ -43,5 +40,7 @@ def track_name():
     response = make_response(redirect(url_for('my_name')))
     response.set_cookie('name', name)
     return response
+
+
 
 app.run(debug=True, host='0.0.0.0', port=3000)
