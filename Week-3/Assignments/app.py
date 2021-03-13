@@ -2,7 +2,10 @@ from flask import (Flask, request, render_template, redirect, url_for, make_resp
 
 import json
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='static',
+            template_folder='templates')
 
 
 
@@ -12,15 +15,17 @@ def index():
 
 @app.route('/data')
 def data():
-    condition = 'Lack of Paramater'
     num1 = request.args.get('number')
-    try:
-        num1 = int(num1)
-        result = int((1+num1)*(num1)/2)
-        return render_template('calculate_sum.html', result = result)
-    except:
-        condition = 'Wrong Parameter'
-        return render_template('data.html', condition = condition)
+    if num1 == None:
+        condition = 'Lack of Paramater'
+    else:
+        try:
+            num1 = int(num1)
+            result = int((1+num1)*(num1)/2)
+            return render_template('calculate_sum.html', result = result)
+        except:
+            condition = 'Wrong Parameter'
+            return render_template('data.html', condition = condition)
     return render_template('data.html', condition = condition)
 
 def get_cookie():
@@ -41,6 +46,9 @@ def track_name():
     response.set_cookie('name', name)
     return response
 
-
+# @app.route('/sum')
+# @app.route('/sum.html')
+# def sum():
+#     return render_template('sum.html')
 
 app.run(debug=True, host='0.0.0.0', port=3000)

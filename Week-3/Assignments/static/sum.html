@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <label> input some noumber</label>
+        <input type='text' name='number' class='number' value=10 autofocus>
+        <button onclick='return calculateSum(document.querySelector(".number").value)'>calculate</button>
+        <p class='result'></p>
+        <script>
+            let initialUrl = 'http://localhost:3000/data?number=10';
+            let initialParse = new DOMParser();
+            let initaialXhr = new XMLHttpRequest();
+
+            initaialXhr.open('GET', initialUrl, true);
+            initaialXhr.onload = function() {
+            if (initaialXhr.status >= 200 && initaialXhr.status < 400) {
+                let initialXml = initialParse.parseFromString(this.response, 'text/xml')
+                document.querySelector(".result").textContent = `Result is ${initialXml.querySelector('h2').innerHTML}`;
+            }
+            };
+            initaialXhr.send();
+
+            function calculateSum(number){
+            let url = `http://localhost:3000/data?number=${number}`;
+            let parse = new DOMParser();
+            let xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 400) {
+                let xml = parse.parseFromString(this.response, 'text/xml')
+                document.querySelector(".result").textContent = `Result is ${xml.querySelector('h2').innerHTML}`;
+            }
+            };
+            xhr.send();}
+        </script>
+    </body>
+</html>
