@@ -6,13 +6,20 @@ nums[0] + nums[1] is 9 '''
 def twoSum(nums, target):
     first = 0
     for num in nums:
-        try:
+        if (target - num) in nums:
             second = nums.index(target - num)
             result = [first, second]
             break
-        except:
+        else:
             pass
-        first += 1
+        # old version
+        # try:
+        #     second = nums.index(target - num)
+        #     result = [first, second]
+        #     break
+        # except:
+        #     pass
+        # first += 1
     return result
 
 
