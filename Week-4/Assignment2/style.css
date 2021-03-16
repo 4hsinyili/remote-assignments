@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+/* .hide{
+    display: none;
+} */
+
+.button-row{
+    padding-top: 200px;
+}
+
+.button{
+    border: white 10px solid;
+    border-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.result{
+    background-color: #e3e3e3;
+    border: white 10px solid;
+    border-color: white;
+    border-radius: 20px;
+    height: 10rem;
+}
